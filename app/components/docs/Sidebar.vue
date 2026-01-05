@@ -8,7 +8,7 @@
         Coding
       </span>
       <ul
-        aria-labelledby="category-coding"
+        aria-labelledby="desktop-category-coding"
         class="flex flex-col gap-2"
       >
         <li
@@ -30,7 +30,7 @@
         School
       </span>
       <ul
-        aria-labelledby="category-school"
+        aria-labelledby="desktop-category-school"
         class="flex flex-col gap-2"
       >
         <li

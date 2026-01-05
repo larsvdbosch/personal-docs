@@ -1,20 +1,44 @@
 <template>
   <section class="bg-white w-full">
     <div class="container padding-section">
-      <div class="flex flex-col items-center">
+      <motion.div
+        :initial="{ opacity: 0, translateY: -20, scale: 0.9 }"
+        :while-in-view="{ opacity: 1, translateY: 0, scale: 1 }"
+        :transition="{
+          type: 'tween',
+          duration: 0.3,
+        }"
+        class="flex flex-col items-center"
+      >
         <ImageZoom src="/images/nuxt.png" />
-      </div>
+      </motion.div>
 
-      <div class="flex flex-col items-center gap-4 text-center mt-32">
+      <motion.div
+        :initial="{ opacity: 0, translateY: -20, scale: 0.9 }"
+        :while-in-view="{ opacity: 1, translateY: 0, scale: 1 }"
+        :transition="{
+          type: 'tween',
+          duration: 0.3,
+        }"
+        class="flex flex-col items-center gap-4 text-center mt-32"
+      >
         <h2 class="text-h4 text-black max-w-128.5">
           Bring intelligence to enterprise knowledge
         </h2>
         <p class="text-paragraph text-black">
           Modernize without the rebuild with enterprise-grade professional service & security.
         </p>
-      </div>
+      </motion.div>
 
-      <div class="mt-16 w-full grid md:grid-cols-2 lg:grid-cols-3 gap-16">
+      <motion.div
+        :initial="{ opacity: 0, translateY: -20, scale: 0.9 }"
+        :while-in-view="{ opacity: 1, translateY: 0, scale: 1 }"
+        :transition="{
+          type: 'tween',
+          duration: 0.3,
+        }"
+        class="mt-16 w-full grid md:grid-cols-2 lg:grid-cols-3 gap-16"
+      >
         <div
           v-for="card in cards"
           :key="card.title"
@@ -30,12 +54,14 @@
             {{ card.description }}
           </p>
         </div>
-      </div>
+      </motion.div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { motion } from 'motion-v'
+
 // Structure of a feature card
 type Card = {
   tagline: string

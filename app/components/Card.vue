@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     :to="to"
-    class="bg-zinc-900 relative border border-zinc-800 hover:card-hover-effect hover:bg-zinc-800 hover:border-zinc-700 card-hover-effect flex w-fit min-h-64 rounded-lg p-4"
+    class="bg-zinc-900 relative border border-zinc-800 hover:card-hover-effect hover:bg-zinc-800 hover:border-zinc-700 card-hover-effect flex w-full min-h-64 rounded-lg p-4"
   >
     <div class="absolute top-0 left-0 ml-4 mt-4">
       <Icon

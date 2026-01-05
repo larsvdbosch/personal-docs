@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed backdrop-blur-3xl w-full top-0 h-(--header-height) z-50">
+  <nav class="fixed w-full top-0 h-(--header-height) z-50 transition-background-color ease-out duration-150">
     <div class="container flex items-center justify-between w-full h-full">
       <Logo />
       <button
@@ -48,14 +48,14 @@
       <div class="hidden lg:flex gap-4 items-center">
         <Button
           href="/docs"
-          variant="secondary"
+          variant="primary"
           aria-label="documentation"
         >
           Documentation
         </Button>
       </div>
     </div>
-  </div>
+  </nav>
   <MobileSidebar />
 </template>
 
@@ -64,10 +64,30 @@ import { onKeyStroke } from '@vueuse/core'
 import { navigationLinks, resourceItems } from '~/constants/navigation'
 
 // Destructuring the sidebar composable for easier access
-const { isOpen, toggle, close } = useSidebar()
+const { isOpen, toggle, close } = useSidebar('mobile-sidebar')
 
 // Sluit het dropdown-menu bij het indrukken van de Escape-toets
 onKeyStroke('Escape', () => {
   if (isOpen.value) close()
 })
+
+// Change header background color on scroll
+onMounted(() => {
+  window.addEventListener('scroll', changeBackgroundOnScroll)
+})
+
+// Remove event listener on component unmount
+onUnmounted(() => {
+  window.removeEventListener('scroll', changeBackgroundOnScroll)
+})
+
+// Function to change header background color based on scroll position
+const changeBackgroundOnScroll = () => {
+  const header = document.querySelector('nav')
+  if (window.scrollY > 80) {
+    header?.classList.add('bg-white')
+  } else {
+    header?.classList.remove('bg-white')
+  }
+}
 </script>

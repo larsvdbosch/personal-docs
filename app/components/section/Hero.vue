@@ -1,28 +1,33 @@
 <template>
-  <section class="bg-linear-to-b from-sky-200 via-sky-100 to-white w-full relative">
-    <span
-      class="absolute hidden md:block text-h4 md:top-25 md:left-40 lg:top-30 lg:left-40 animate-float"
+  <section class="bg-linear-to-b from-sky-200 via-sky-100 to-white w-full">
+    <motion.div
+      :initial="{ opacity: 0, translateY: -20, scale: 0.9 }"
+      :while-in-view="{ opacity: 1, translateY: 0, scale: 1 }"
+      :transition="{
+        type: 'tween',
+        duration: 0.3,
+      }"
+      class="container padding-section flex flex-col gap-8 text-center items-center justify-center"
     >
-      🖼️
-    </span>
-    <span
-      class="absolute hidden md:block text-h4 md:top-85 md:right-30 lg:top-100 lg:right-60 animate-float [animation-delay:0.5s]"
-    >
-      🧲
-    </span>
-    <span
-      class="absolute hidden md:block text-h2 md:top-120 md:left-50 lg:top-120 lg:left-70 animate-float [animation-delay:1s]"
-    >
-      🪼
-    </span>
-    <div class="container padding-section flex flex-col gap-8 text-center items-center justify-center">
-      <Tagline :variant="variant">
-        {{ tagline }}
-      </Tagline>
-      <h1 class="text-h1 bg-linear-to-b from-black to-zinc-600 text-transparent bg-clip-text max-w-195">
+      <motion.div
+        :initial="{ opacity: 0, translateY: -40, scale: 0.9 }"
+        :while-in-view="{ opacity: 1, translateY: 0, scale: 1 }"
+        :transition="{
+          type: 'spring',
+          duration: 1.5,
+          bounce: 0.5,
+        }"
+      >
+        <Tagline
+          :variant="variant"
+        >
+          {{ tagline }}
+        </Tagline>
+      </motion.div>
+      <h1 class="text-h1 bg-linear-to-b from-blue-950 to-blue-900 text-transparent bg-clip-text max-w-195">
         {{ title }}
       </h1>
-      <p class="text-paragraph text-black max-w-91">
+      <p class="text-paragraph text-black max-w-md">
         {{ description }}
       </p>
       <Button
@@ -32,12 +37,13 @@
       >
         {{ buttonLabel }}
       </Button>
-    </div>
+    </motion.div>
   </section>
 </template>
 
 <script setup lang="ts">
 // Import the Variant type from Tagline component
+import { motion } from 'motion-v'
 import type { Variant } from '../Tagline.vue'
 
 // Define the props for the Hero component

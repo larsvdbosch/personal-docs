@@ -1,6 +1,7 @@
 <template>
   <div>
     <DocsNavbar />
+    <DocsMobileSidebar />
     <DocsSidebar />
     <main class="min-h-screen pt-(--header-height) lg:pl-64">
       <slot />

@@ -1,7 +1,7 @@
-export function useSidebar(name: string) {
-  const isOpen = useState<boolean>(`${name}-is-open`, () => false)
+export function useDocsSidebar() {
+  const isOpen = useState<boolean>('docs-sidebar-is-open', () => false)
 
-  const sidebarRef = ref<HTMLElement | null>(null)
+  const docsSidebarRef = ref<HTMLElement | null>(null)
 
   const previouslyFocusedElement = ref<HTMLElement | null>(null)
 
@@ -15,7 +15,7 @@ export function useSidebar(name: string) {
     if (e.key !== 'Tab') return
 
     // Vind alle focusbare elementen binnen de modal
-    const focusableElements = sidebarRef.value?.querySelectorAll(
+    const focusableElements = docsSidebarRef.value?.querySelectorAll(
       'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])',
     )
 
@@ -47,7 +47,7 @@ export function useSidebar(name: string) {
     previouslyFocusedElement.value = document.activeElement as HTMLElement
 
     nextTick(() => {
-      sidebarRef.value?.focus()
+      docsSidebarRef.value?.focus()
     })
   }
 
@@ -76,6 +76,6 @@ export function useSidebar(name: string) {
     open,
     close,
     handleKeydown,
-    sidebarRef,
+    docsSidebarRef,
   }
 }

@@ -7,6 +7,7 @@
     role="dialog"
     aria-modal="true"
     aria-label="Navigatiemenu"
+    tabindex="-1"
   >
     <div
       class="flex flex-col gap-4"
@@ -35,9 +36,9 @@
 <script setup lang="ts">
 import { navigationLinks, resourceItems } from '~/constants/navigation'
 
+const { isOpen, handleKeydown, sidebarRef } = useSidebar('mobile-sidebar')
+
 onMounted(() => {
   document.addEventListener('keydown', handleKeydown)
 })
-
-const { isOpen, handleKeydown, sidebarRef } = useSidebar()
 </script>

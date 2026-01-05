@@ -6,7 +6,7 @@
       <h4>Lars' personal documentation</h4>
       <p>Welcome to my personal documentation. Here you will find all the information you need.</p>
     </div>
-    <div class="mt-8 grid grid-cols-4 gap-4">
+    <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
       <Card
         v-for="card in cards"
         :key="card.label"

@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/content',
     '@vueuse/nuxt',
+    'motion-v/nuxt',
   ],
   components: {
     dirs: ['~/components'],

@@ -4,8 +4,7 @@
       tagline="🎉 Join 50,000+ creators in"
       variant="blue"
       title="A documentation platform to write down useful knowledge for later."
-      description="The first social scheduler built for onchain teams.
-        Manage Farcaster, Zora, and Twitter in one place."
+      description="My personal documentation platform is designed to help creators organize and share their knowledge effectively."
       button-label="Read the documentation"
       href="/docs"
     />
