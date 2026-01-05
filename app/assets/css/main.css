@@ -1,0 +1,144 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+    font-family: var(--font-display);
+}
+
+body {
+    min-height: 100dvh;
+    color: var(--color-black);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Theme variables */
+@theme {
+  --font-display: "SF Pro Display", sans-serif;
+  --font-rounded: "SF Pro Rounded", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+  --header-height: 64px;
+}
+
+/* Container class for max-width and horizontal padding */
+@utility container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline: 16px;
+}
+
+/* Section padding utility for vertical padding */
+@utility padding-section {
+    padding-block: clamp(4rem, 2.609rem + 6.957vw, 8rem);
+}
+
+/* Custom text styles */
+@utility text-h1 {
+  font-size: clamp(2.5rem, 1.978rem + 2.609vw, 4rem);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+}
+
+@utility text-h2 {
+  font-size: clamp(2.25rem, 1.978rem + 2.609vw, 3.5rem);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+}
+
+@utility text-h3 {
+  font-size: clamp(2rem, 1.722rem + 1.304vw, 3rem);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+}
+
+@utility text-h4 {
+  font-size: clamp(1.75rem, 1.467rem + 0.978vw, 2.5rem);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+}
+
+@utility text-h5 {
+  font-size: clamp(1.5rem, 1.211rem + 0.652vw, 2rem);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+}
+
+@utility text-h6 {
+  font-size: clamp(1rem, 0.955rem + 0.326vw, 1.25rem);
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+}
+
+@utility text-label {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    font-weight: 500;
+    letter-spacing: var(--tracking-normal);
+}
+
+@utility text-paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: var(--tracking-normal);
+}
+
+@utility text-small {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    font-weight: 500;
+    letter-spacing: var(--tracking-normal);
+}
+
+/* Extra custom styles for elements */
+@utility logo-text {
+    font-family: var(--font-rounded);
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+/* Prose styles for documentation content (/docs route) */
+.prose-docs {
+  /* Headings gebruiken jouw utilities */
+    h1 { @apply text-h1 my-8; }
+    h2 { @apply text-h2 my-8; }
+    h3 { @apply text-h3 my-8; }
+    h4 { @apply text-h4 mb-8; } 
+    h5 { @apply text-h5 mt-8 mb-4; }
+    h6 { @apply text-h6 mt-8 mb-4; }
+    p { @apply text-paragraph text-gray-300 my-4; }
+    pre { @apply text-green-300 text-sm leading-6; }
+    li { @apply text-paragraph mb-2; }
+    blockquote { @apply border-l-4 border-gray-300 pl-4 italic text-gray-600 mb-6; }
+    /* code { @apply flex flex-col text-sm leading-6 bg-zinc-800 border border-zinc-700 p-4 rounded-lg my-8; } */
+}
+
+/* Text selection styles */
+::selection {
+    background-color: var(--color-blue-200);
+    color: var(--color-blue-800);
+}
+
+/* Focus visible outline for accessibility (keyboard navigation) */
+:focus-visible {
+    outline: 2px solid var(--color-blue-500);
+    outline-offset: 2px;
+}
+
+/* Active label state with scale effect for haptic feedback */
+.active-label-state:active {
+  scale: 0.97;
+  transition: scale 0.1s ease-out;
+}
+
+.sidebar-category-title {
+  @apply font-semibold text-white mb-2;
+}
