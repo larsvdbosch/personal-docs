@@ -15,9 +15,9 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 useSeoMeta({
-  title: 'Notion - Documentation platform for creators',
-  description: 'Welcome to Notion, the documentation platform for creators.',
+  title: 'Lars - Documentation platform for creators',
+  description: 'Welcome to my personal docs',
 })
 </script>

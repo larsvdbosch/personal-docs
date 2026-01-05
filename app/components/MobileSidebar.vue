@@ -2,7 +2,8 @@
   <!-- Sidebar panel -->
   <aside
     id="mobile-sidebar"
-    :class="['fixed top-(--header-height) right-0 h-full bg-white p-4 w-full flex flex-col z-50 transition-translate ease-in-out duration-300', isOpen ? 'translate-x-0': 'translate-x-full']"
+    ref="sidebarRef"
+    :class="['fixed top-(--header-height) right-0 h-full bg-white p-4 w-full flex flex-col z-50 transition-translate ease-in-out duration-300', isOpen ? 'translate-x-0': 'translate-x-full invisible']"
     role="dialog"
     aria-modal="true"
     aria-label="Navigatiemenu"
@@ -31,8 +32,12 @@
   </aside>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { navigationLinks, resourceItems } from '~/constants/navigation'
 
-const { isOpen } = useSidebar()
+onMounted(() => {
+  document.addEventListener('keydown', handleKeydown)
+})
+
+const { isOpen, handleKeydown, sidebarRef } = useSidebar()
 </script>

@@ -1,6 +1,6 @@
 ---
-title: Does the title work?
-date: 2024-06-15
+title: Home page?
+description: This is my home page description.
 ---
 
 ##### The Nuxt framework

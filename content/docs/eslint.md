@@ -1,6 +1,6 @@
 ---
 title: Hoe ESLint instellen in een nieuw project?
-date: 2024-06-15
+description: Eslint instellen in een nieuw Nuxt 3 project.
 ---
 
 #### {{ title }}

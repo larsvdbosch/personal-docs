@@ -1,12 +1,12 @@
 <template>
   <div class="flex">
-    <div :class="['px-4 py-2 rounded-full text-small w-fit cursor-pointer', variantClasses[variant]]">
+    <div :class="['px-4 py-2 rounded-full text-small w-fit', variantClasses[variant]]">
       <slot />
     </div>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 export type Variant = 'red' | 'orange' | 'yellow' | 'green' | 'blue' | 'pink' | 'purple' | 'black'
 
 // Define the props for the Tagline component

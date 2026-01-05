@@ -98,6 +98,13 @@ body {
     letter-spacing: var(--tracking-normal);
 }
 
+@utility text-card-title {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: var(--tracking-normal);
+}
+
 /* Extra custom styles for elements */
 @utility logo-text {
     font-family: var(--font-rounded);

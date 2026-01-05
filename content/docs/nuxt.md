@@ -1,6 +1,6 @@
 ---
-title: Getting started
-date: 2024-06-15
+title: Nuxt framework explained
+description: An explanation of the Nuxt framework and its features.
 ---
 
 #### {{ title }}

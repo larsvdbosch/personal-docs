@@ -39,7 +39,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { onClickOutside, onKeyStroke } from '@vueuse/core'
 
 // Define the props for the DropdownMenu component

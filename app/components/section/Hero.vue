@@ -21,7 +21,7 @@
   </section>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 // Import the Variant type from Tagline component
 import type { Variant } from '../Tagline.vue'
 

@@ -1,29 +1,53 @@
 <template>
-  <div class="fixed pt-(--header-height) hidden lg:block z-30 h-full w-64 border-r border-zinc-900 bg-zinc-950">
-    <li class="flex flex-col gap-2 p-4">
-      <span class="sidebar-category-title">Coding</span>
-      <DocsSidebarLink
-        v-for="link in docsNavigationCode"
-        :key="link.title"
-        :to="link.href"
+  <nav class="fixed pt-(--header-height) hidden lg:block z-30 h-full w-64 border-r border-zinc-900 bg-zinc-950">
+    <div class="flex flex-col p-4">
+      <span
+        id="category-coding"
+        class="sidebar-category-title"
       >
-        {{ link.title }}
-      </DocsSidebarLink>
-    </li>
+        Coding
+      </span>
+      <ul
+        aria-labelledby="category-coding"
+        class="flex flex-col gap-2"
+      >
+        <li
+          v-for="link in docsNavigationCode"
+          :key="link.title"
+        >
+          <DocsSidebarLink :to="link.href">
+            {{ link.title }}
+          </DocsSidebarLink>
+        </li>
+      </ul>
+    </div>
 
-    <li class="flex flex-col gap-2 p-4">
-      <span class="sidebar-category-title">School</span>
-      <DocsSidebarLink
-        v-for="link in docsNavigationSchool"
-        :key="link.title"
-        :to="link.href"
+    <div class="flex flex-col p-4">
+      <span
+        id="category-school"
+        class="sidebar-category-title"
       >
-        {{ link.title }}
-      </DocsSidebarLink>
-    </li>
-  </div>
+        School
+      </span>
+      <ul
+        aria-labelledby="category-school"
+        class="flex flex-col gap-2"
+      >
+        <li
+          v-for="link in docsNavigationSchool"
+          :key="link.title"
+        >
+          <DocsSidebarLink
+            :to="link.href"
+          >
+            {{ link.title }}
+          </DocsSidebarLink>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { docsNavigationCode, docsNavigationSchool } from '~/constants/docsNavigation'
 </script>

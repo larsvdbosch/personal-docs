@@ -49,7 +49,7 @@
         <Button
           href="/docs"
           variant="secondary"
-          aria-label="Docs"
+          aria-label="documentation"
         >
           Documentation
         </Button>
@@ -59,7 +59,7 @@
   <MobileSidebar />
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { onKeyStroke } from '@vueuse/core'
 import { navigationLinks, resourceItems } from '~/constants/navigation'
 

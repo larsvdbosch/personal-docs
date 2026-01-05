@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 // Set the body background color using useHead from Nuxt
 useHead({
   bodyAttrs: {

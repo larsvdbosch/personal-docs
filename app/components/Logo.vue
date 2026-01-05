@@ -5,7 +5,7 @@
   >
     <NuxtImg
       src="/images/lars.jpg"
-      alt="Logo"
+      alt="Persoonlijke foto van Lars"
       width="24"
       height="24"
       class="rounded-full"

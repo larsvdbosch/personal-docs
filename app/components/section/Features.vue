@@ -35,7 +35,7 @@
   </section>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 // Structure of a feature card
 type Card = {
   tagline: string
