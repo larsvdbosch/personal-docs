@@ -1,8 +1,8 @@
 <template>
   <ol
-    class="fixed bottom-4 right-4 z-10"
+    class="fixed bottom-4 right-4 z-20"
   >
-    <li class="bg-[#006bff] border border-white inline-flex items-center p-6 rounded-lg w-fit min-w-lg">
+    <li class="bg-toast border border-white inline-flex items-center p-6 rounded-lg w-fit min-w-lg">
       <span class="text-paragraph">{{ label }}</span>
     </li>
   </ol>

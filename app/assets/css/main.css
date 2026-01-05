@@ -15,10 +15,25 @@ body {
 
 /* Theme variables */
 @theme {
+  /* Font families */
   --font-display: "SF Pro Display", sans-serif;
   --font-rounded: "SF Pro Rounded", sans-serif;
   --font-mono: "Geist Mono", monospace;
+
+  /* Header height */
   --header-height: 64px;
+
+  /* Custom colors */
+  --color-toast: #006bff;
+
+  /* Animation durations */
+  --animate-float: float 3s ease-in-out infinite;
+}
+
+/* Animation for floating emojies in the hero */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 /* Container class for max-width and horizontal padding */
@@ -71,7 +86,7 @@ body {
 }
 
 @utility text-h6 {
-  font-size: clamp(1rem, 0.955rem + 0.326vw, 1.25rem);
+  font-size: clamp(1.25rem, 0.955rem + 0.326vw, 1.5rem);
   line-height: 1;
   font-weight: 600;
   letter-spacing: var(--tracking-tight);
@@ -125,7 +140,7 @@ body {
     pre { @apply text-green-300 text-sm leading-6; }
     li { @apply text-paragraph mb-2; }
     blockquote { @apply border-l-4 border-gray-300 pl-4 italic text-gray-600 mb-6; }
-    /* code { @apply flex flex-col text-sm leading-6 bg-zinc-800 border border-zinc-700 p-4 rounded-lg my-8; } */
+    /* code { @apply my-8; } */
 }
 
 /* Text selection styles */
@@ -143,7 +158,9 @@ body {
 /* Active label state with scale effect for haptic feedback */
 .active-label-state:active {
   scale: 0.97;
-  transition: scale 0.1s ease-out;
+  transition-property: scale;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
 }
 
 .sidebar-category-title {

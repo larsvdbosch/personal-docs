@@ -3,7 +3,7 @@
     :is="componentTag"
     v-bind="componentAttrs"
     :class="[
-      'px-4 py-2 rounded-lg w-fit text-label active-label-state transition-colors ease-[cubic-bezier(.25,.46,.45,.94)] duration-150', // default styles
+      'px-4 py-2 rounded-lg w-fit text-label active-label-state transition-background-color ease-[cubic-bezier(.25,.46,.45,.94)] duration-150', // default styles
       variantClasses[variant], // variant-specific styles
     ]"
   >

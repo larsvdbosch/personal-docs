@@ -20,6 +20,9 @@
 </template>
 
 <script setup lang="ts">
+// Define the structure of a documentation card
+import type { Card } from '~/components/Card.vue'
+
 // Set SEO meta tags for the documentation index page
 useSeoMeta({
   title: 'Home | Documentation',
@@ -30,7 +33,7 @@ definePageMeta({
   layout: 'docs',
 })
 
-const cards = [
+const cards: Card[] = [
   {
     icon: 'lucide:copy',
     label: 'Getting started',
@@ -56,13 +59,13 @@ const cards = [
     to: '/docs/security',
   },
   {
-    icon: 'lucide:performance',
+    icon: 'lucide:spotlight',
     label: 'Performance',
     description: 'Optimize your application performance',
     to: '/docs/performance',
   },
   {
-    icon: 'lucide:plugin',
+    icon: 'lucide:blocks',
     label: 'Plugins',
     description: 'Extend functionality with plugins',
     to: '/docs/plugins',

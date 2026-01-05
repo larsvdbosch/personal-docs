@@ -17,7 +17,7 @@
         <div class="h-6 w-px bg-zinc-600" />
         <NuxtLink
           to="/docs"
-          class="hover:text-zinc-500 text-lg font-semibold text-white transition-colors ease-out duration-150"
+          class="hover:text-zinc-500 text-lg font-semibold text-white transition-background-color ease-out duration-150"
         >
           <span>Documentation</span>
         </NuxtLink>

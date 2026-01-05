@@ -2,7 +2,7 @@
   <div>
     <DocsNavbar />
     <DocsSidebar />
-    <main class=" min-h-screen pt-(--header-height) lg:pl-64">
+    <main class="min-h-screen pt-(--header-height) lg:pl-64">
       <slot />
     </main>
   </div>

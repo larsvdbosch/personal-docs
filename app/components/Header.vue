@@ -3,7 +3,7 @@
     <div class="container flex items-center justify-between w-full h-full">
       <Logo />
       <button
-        class="flex lg:hidden p-2 rounded-lg hover:bg-zinc-200 transition-colors ease-out duration-150"
+        class="flex lg:hidden p-2 rounded-lg hover:bg-zinc-200 transition-background-color ease-out duration-150"
         :aria-expanded="isOpen"
         aria-controls="mobile-sidebar"
         :aria-label="isOpen ? 'Sluit menu' : 'Open menu'"
@@ -26,7 +26,7 @@
         class="hidden lg:flex gap-8 items-center"
       >
         <DropdownMenu
-          title="Resources"
+          title="Dropdown"
         >
           <NavLink
             v-for="item in resourceItems"

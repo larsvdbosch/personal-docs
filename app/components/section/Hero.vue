@@ -1,5 +1,20 @@
 <template>
   <section class="bg-linear-to-b from-sky-200 via-sky-100 to-white w-full relative">
+    <span
+      class="absolute hidden md:block text-h4 md:top-25 md:left-40 lg:top-30 lg:left-40 animate-float"
+    >
+      🖼️
+    </span>
+    <span
+      class="absolute hidden md:block text-h4 md:top-85 md:right-30 lg:top-100 lg:right-60 animate-float [animation-delay:0.5s]"
+    >
+      🧲
+    </span>
+    <span
+      class="absolute hidden md:block text-h2 md:top-120 md:left-50 lg:top-120 lg:left-70 animate-float [animation-delay:1s]"
+    >
+      🪼
+    </span>
     <div class="container padding-section flex flex-col gap-8 text-center items-center justify-center">
       <Tagline :variant="variant">
         {{ tagline }}

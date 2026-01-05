@@ -17,19 +17,19 @@
 </template>
 
 <script setup lang="ts">
-type Props = {
+export type Card = {
   icon: string
   label: string
   description: string
   to: string
 }
 
-defineProps<Props>()
+defineProps<Card>()
 </script>
 
 <style scoped>
   .card-hover-effect {
-    transition-property: background-color, border-color;
+    transition-property: background-color, border-color, scale;
     transition-duration: 100ms;
     transition-timing-function: ease-in-out;
   }
