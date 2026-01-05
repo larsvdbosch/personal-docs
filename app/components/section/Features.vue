@@ -2,7 +2,7 @@
   <section class="bg-white w-full">
     <div class="container padding-section">
       <div class="flex flex-col items-center">
-        <ImageZoom src="https://placehold.co/600x400" />
+        <ImageZoom src="/images/nuxt.png" />
       </div>
 
       <div class="flex flex-col items-center gap-4 text-center mt-32">

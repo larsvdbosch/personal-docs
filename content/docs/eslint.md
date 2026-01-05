@@ -12,6 +12,7 @@ Daarna de onderstaande ESLint settings kopiëren naar de desbetreffende bestande
 
 `settings.json`
 
+::code-block
 ```js
 {
     "prettier.enable": false,
@@ -34,8 +35,11 @@ Daarna de onderstaande ESLint settings kopiëren naar de desbetreffende bestande
   ],
 }
 ```
+::
 
 `eslint.config.mjs`
+
+::code-block
 ```js
 import withNuxt from "./.nuxt/eslint.config.mjs";
 
@@ -46,8 +50,11 @@ export default withNuxt(
 	},
 );
 ```
+::
 
 `nuxt.config.ts`
+
+::code-block
 ```ts
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -80,11 +87,15 @@ export default defineNuxtConfig({
 	},
 });
 ```
+::
 
 In `package.json` onder "postinstall"
+
+::code-block
 ```json
 "lint": "eslint .",
 "lint:fix": "eslint . --fix"
 ```
+::
 
 Finito.
