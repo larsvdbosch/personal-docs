@@ -23,6 +23,10 @@ type NavItem = {
 ```
 ::
 
+`
+eslint
+`
+
 Most results that are paginated can also be filtered. This makes it easy to
 retrieve specific information, like any issues assigned to a particular user,
 but much more complex queries are also possible. For example, you could fetch

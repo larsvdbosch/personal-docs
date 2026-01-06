@@ -12,9 +12,6 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'motion-v/nuxt',
   ],
-  components: {
-    dirs: ['~/components'],
-  },
   devtools: { enabled: true },
   app: {
     head: {

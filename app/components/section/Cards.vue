@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { motion } from 'motion-v'
-</script>
-
 <template>
   <section class="bg-sky-100 w-full">
     <div class="container padding-section">
@@ -18,3 +14,7 @@ import { motion } from 'motion-v'
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { motion } from 'motion-v'
+</script>

@@ -1,6 +1,6 @@
 <template>
   <main
-    class="prose-docs text-white max-w-5xl mx-auto px-4 py-8 md:py-12 lg:py-16"
+    class="prose max-w-5xl mx-auto px-4 py-8 md:py-12 lg:py-16"
   >
     <ContentRenderer
       v-if="page"

@@ -1,10 +1,14 @@
 <template>
   <main
-    class="prose-docs text-white max-w-5xl mx-auto px-4 py-8 md:py-12 lg:py-16"
+    class="text-white max-w-5xl mx-auto px-4 py-8 md:py-12 lg:py-16"
   >
     <div>
-      <h4>Lars' personal documentation</h4>
-      <p>Welcome to my personal documentation. Here you will find all the information you need.</p>
+      <h2 class="text-h4 mb-4">
+        Lars' personal documentation
+      </h2>
+      <p class="text-paragraph">
+        Welcome to my personal documentation. Here you will find all the information you need.
+      </p>
     </div>
     <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
       <Card

@@ -10,6 +10,7 @@ Eerst de package installeren:
 
 Daarna de onderstaande ESLint settings kopiëren naar de desbetreffende bestanden.
 
+
 `settings.json`
 
 ::code-block

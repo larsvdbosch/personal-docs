@@ -17,7 +17,7 @@
         Coding
       </span>
       <ul
-        aria-labelledby="category-coding"
+        aria-labelledby="mobile-category-coding"
         class="flex flex-col gap-2"
       >
         <li
@@ -39,7 +39,7 @@
         School
       </span>
       <ul
-        aria-labelledby="category-school"
+        aria-labelledby="mobile-category-school"
         class="flex flex-col gap-2"
       >
         <li

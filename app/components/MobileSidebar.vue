@@ -41,4 +41,8 @@ const { isOpen, handleKeydown, sidebarRef } = useSidebar('mobile-sidebar')
 onMounted(() => {
   document.addEventListener('keydown', handleKeydown)
 })
+
+onUnmounted(() => {
+  document.removeEventListener('keydown', handleKeydown)
+})
 </script>

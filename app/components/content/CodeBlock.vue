@@ -1,9 +1,9 @@
 <template>
   <div
-    class="relative my-8"
+    class="relative"
   >
     <button
-      class="absolute flex items-center justify-center z-10 bg-zinc-800 hover:bg-zinc-700 active:scale-[0.97] active:bg-zinc-600 border border-zinc-700 rounded-lg size-8 top-4 right-4 cursor-pointer transition-[background-color, scale] ease-[cubic-bezier(.25,.46,.45,.94)] duration-150"
+      class="absolute flex items-center justify-center z-10 bg-zinc-800 hover:bg-zinc-700 active:scale-[0.97] active:bg-zinc-600 border border-zinc-700 rounded-lg size-8 top-4 right-4 cursor-pointer transition-[background-color,scale] ease-[cubic-bezier(.25,.46,.45,.94)] duration-150"
       aria-label="kopieren"
       @click="copyCode"
     >
@@ -13,10 +13,7 @@
         size="16"
       />
     </button>
-    <div
-      ref="codeblock"
-      class="relative flex flex-col bg-zinc-900 border border-zinc-800 overflow-x-auto rounded-lg p-4 my-8"
-    >
+    <div ref="codeblock">
       <slot />
     </div>
   </div>

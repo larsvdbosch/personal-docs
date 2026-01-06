@@ -2,7 +2,7 @@
   <nav class="fixed pt-(--header-height) hidden lg:block z-30 h-full w-64 border-r border-zinc-900 bg-zinc-950">
     <div class="flex flex-col p-4">
       <span
-        id="category-coding"
+        id="desktop-category-coding"
         class="sidebar-category-title"
       >
         Coding
@@ -24,7 +24,7 @@
 
     <div class="flex flex-col p-4">
       <span
-        id="category-school"
+        id="desktop-category-school"
         class="sidebar-category-title"
       >
         School
