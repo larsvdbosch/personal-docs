@@ -7,6 +7,7 @@
       width="1280"
       height="720"
       class="cursor-zoom-in rounded-lg"
+      loading="lazy"
       @click="openZoom"
     />
 
@@ -27,6 +28,7 @@
           width="1280"
           height="720"
           :class="['max-h-[90vh] max-w-[90vw] transition-scale duration-400 ease-out rounded-lg', isZoomed ? 'scale-100' : 'scale-90']"
+          loading="lazy"
         />
       </div>
     </Teleport>

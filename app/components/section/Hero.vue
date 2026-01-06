@@ -24,7 +24,7 @@
           {{ tagline }}
         </Tagline>
       </motion.div>
-      <h1 class="text-h1 bg-linear-to-b from-blue-950 to-blue-900 text-transparent bg-clip-text max-w-195">
+      <h1 class="text-h1 bg-linear-to-b from-blue-950 to-blue-900 text-transparent bg-clip-text p-2 max-w-195">
         {{ title }}
       </h1>
       <p class="text-paragraph text-black max-w-md">
