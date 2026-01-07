@@ -4,12 +4,10 @@
       <motion.div
         :initial="{ opacity: 0, translateY: -20, scale: 0.9 }"
         :while-in-view="{ opacity: 1, translateY: 0, scale: 1 }"
-        :transition="{
-          type: 'tween',
-          duration: 0.3,
-        }"
+        :in-view-options="{ once: true }"
+        :transition="motionTransition"
       >
-        <ImageZoom src="/images/nuxt.png" />
+        <ImageZoom src="/images/docs-2.png" />
       </motion.div>
     </div>
   </section>

@@ -16,8 +16,7 @@ body {
 /* Theme variables */
 @theme {
   /* Font families */
-  --font-display: "SF Pro Display", sans-serif;
-  --font-rounded: "SF Pro Rounded", sans-serif;
+  --font-display: "Public Sans", sans-serif;
   --font-mono: "Geist Mono", monospace;
 
   /* Header height */
@@ -109,13 +108,6 @@ body {
     line-height: 1.4;
     font-weight: 600;
     letter-spacing: var(--tracking-normal);
-}
-
-/* Extra custom styles for elements */
-@utility logo-text {
-    font-family: var(--font-rounded);
-    font-size: 2.5rem;
-    font-weight: 800;
 }
 
 /* Prose styles for docs content */

@@ -9,11 +9,9 @@
 </template>
 
 <script setup lang="ts">
-// Define the props for the NavLink component
 type Props = {
   to: string
 }
 
-// Use defineProps to declare the props
 defineProps<Props>()
 </script>

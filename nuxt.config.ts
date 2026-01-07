@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     'motion-v/nuxt',
+    'nuxt-swiper',
   ],
   devtools: { enabled: true },
   app: {

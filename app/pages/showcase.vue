@@ -40,8 +40,8 @@ useSeoMeta({
 })
 
 const Images = [
-  '/images/dashboard.png',
-  '/images/nuxt.png',
-  '/images/nuxt.png',
+  '/images/docs.png',
+  '/images/docs-2.png',
+  '/images/docs.png',
 ]
 </script>

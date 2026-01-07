@@ -11,6 +11,7 @@
     <SectionFeatures />
     <SectionNumbers />
     <SectionCards />
+    <SectionSwiperGallery />
   </div>
 </template>
 

@@ -9,17 +9,15 @@
 <script setup lang="ts">
 export type Variant = 'red' | 'orange' | 'yellow' | 'green' | 'blue' | 'pink' | 'purple' | 'black'
 
-// Define the props for the Tagline component
 type Props = {
   variant?: Variant
 }
 
-// Use withDefaults to set default values for props
 withDefaults(defineProps<Props>(), {
   variant: 'red',
 })
 
-// Define the classes for each variant
+// Kleuren per variant voor achtergrond, border en tekst
 const variantClasses = {
   red: 'bg-red-200 border-2 border-red-300 text-red-800',
   orange: 'bg-orange-200 border-2 border-orange-300 text-orange-800',

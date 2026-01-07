@@ -1,21 +1,24 @@
 <template>
-  <section class="bg-linear-to-b from-sky-200 via-sky-100 to-white w-full">
+  <section class="bg-linear-to-b from-sky-200 via-sky-100 to-white w-full pt-16">
     <motion.div
-      :initial="{ opacity: 0, translateY: -20, scale: 0.9 }"
-      :while-in-view="{ opacity: 1, translateY: 0, scale: 1 }"
+      :initial="{ opacity: 0, translateY: 80, scale: 0.9, blur: 80 }"
+      :while-in-view="{ opacity: 1, translateY: 0, scale: 1, blur: 80 }"
+      :in-view-options="{ once: true }"
       :transition="{
-        type: 'tween',
-        duration: 0.3,
+        type: 'spring',
+        duration: 2,
       }"
       class="container padding-section flex flex-col gap-8 text-center items-center justify-center"
     >
       <motion.div
-        :initial="{ opacity: 0, translateY: -40, scale: 0.9 }"
+        :initial="{ opacity: 0, translateY: -60, scale: 0.9 }"
         :while-in-view="{ opacity: 1, translateY: 0, scale: 1 }"
+        :in-view-options="{ once: true }"
         :transition="{
           type: 'spring',
           duration: 1.5,
           bounce: 0.5,
+          delay: 0.5,
         }"
       >
         <Tagline
@@ -42,11 +45,9 @@
 </template>
 
 <script setup lang="ts">
-// Import the Variant type from Tagline component
 import { motion } from 'motion-v'
 import type { Variant } from '../Tagline.vue'
 
-// Define the props for the Hero component
 type Props = {
   tagline: string
   title: string
@@ -56,6 +57,5 @@ type Props = {
   variant?: Variant
 }
 
-// Default variant is 'primary' if not provided
 defineProps<Props>()
 </script>

@@ -3,7 +3,6 @@ type NavItem = {
   href: string
 }
 
-// Documentation navigation structure
 export const docsNavigationCode: NavItem[] = [
   {
     title: 'Nuxt',

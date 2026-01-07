@@ -1,9 +1,9 @@
 <template>
-  <nav class="fixed w-full top-0 h-(--header-height) z-50 transition-background-color ease-out duration-150">
+  <nav class="fixed w-full top-0 h-(--header-height) z-50 transition-[background-color] ease-out duration-150">
     <div class="container flex items-center justify-between w-full h-full">
       <Logo />
       <button
-        class="flex lg:hidden p-2 rounded-lg hover:bg-zinc-200 transition-background-color ease-out duration-150"
+        class="flex lg:hidden p-2 rounded-lg hover:bg-zinc-200 transition-[background-color] ease-out duration-150"
         :aria-expanded="isOpen"
         aria-controls="mobile-sidebar"
         :aria-label="isOpen ? 'Sluit menu' : 'Open menu'"
@@ -22,29 +22,7 @@
           size="24"
         />
       </button>
-      <div
-        class="hidden lg:flex gap-8 items-center"
-      >
-        <DropdownMenu
-          title="Dropdown"
-        >
-          <NavLink
-            v-for="item in resourceItems"
-            :key="item.name"
-            :to="item.href"
-          >
-            {{ item.name }}
-          </NavLink>
-        </DropdownMenu>
-
-        <NavLink
-          v-for="link in navigationLinks"
-          :key="link.name"
-          :to="link.href"
-        >
-          {{ link.name }}
-        </NavLink>
-      </div>
+      <AnimatedTabs />
       <div class="hidden lg:flex gap-4 items-center">
         <Button
           href="/docs"
@@ -61,33 +39,30 @@
 
 <script setup lang="ts">
 import { onKeyStroke } from '@vueuse/core'
-import { navigationLinks, resourceItems } from '~/constants/navigation'
 
-// Destructuring the sidebar composable for easier access
 const { isOpen, toggle, close } = useSidebar('mobile-sidebar')
 
-// Sluit het dropdown-menu bij het indrukken van de Escape-toets
+// Sluit sidebar met Escape toets
 onKeyStroke('Escape', () => {
   if (isOpen.value) close()
 })
 
-// Change header background color on scroll
+// Voeg scroll listener toe bij mount, verwijder bij unmount
 onMounted(() => {
   window.addEventListener('scroll', changeBackgroundOnScroll)
 })
 
-// Remove event listener on component unmount
 onUnmounted(() => {
   window.removeEventListener('scroll', changeBackgroundOnScroll)
 })
 
-// Function to change header background color based on scroll position
+// Toont witte achtergrond met border na 80px scroll voor visuele scheiding
 const changeBackgroundOnScroll = () => {
   const header = document.querySelector('nav')
   if (window.scrollY > 80) {
-    header?.classList.add('bg-white')
+    header?.classList.add('bg-white', 'border-b', 'border-zinc-100')
   } else {
-    header?.classList.remove('bg-white')
+    header?.classList.remove('bg-white', 'border-b', 'border-zinc-100')
   }
 }
 </script>

@@ -4,10 +4,8 @@
       <motion.div
         :initial="{ opacity: 0, translateY: -20, scale: 0.9 }"
         :while-in-view="{ opacity: 1, translateY: 0, scale: 1 }"
-        :transition="{
-          type: 'tween',
-          duration: 0.3,
-        }"
+        :in-view-options="{ once: true }"
+        :transition="motionTransition"
         class="flex flex-col md:flex-row items-center justify-center gap-16"
       >
         <div
@@ -35,14 +33,9 @@ type Statistics = {
   description: string
 }
 
-type Props = {
-  statistics?: Statistics[]
-}
-
-defineProps<Props>()
-
 const Statistics: Statistics[] = [
   { label: '1.2mil+', description: 'Monthly downloads' },
+  { label: '50k+', description: 'Creators' },
   { label: '145+', description: 'Contributors' },
   { label: '5.3k+', description: 'Github Stars' },
 ]

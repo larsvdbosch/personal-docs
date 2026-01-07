@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- Regular image -->
+    <!-- Normale afbeelding, klikbaar voor zoom -->
     <NuxtImg
       :src="src"
       alt="Zoomable image"
@@ -11,7 +11,7 @@
       @click="openZoom"
     />
 
-    <!-- Dialog for zoomed image -->
+    <!-- Fullscreen overlay met vergrote afbeelding -->
     <Teleport to="body">
       <div
         ref="modalRef"
@@ -36,44 +36,41 @@
 </template>
 
 <script setup lang="ts">
-// Define the props for the ImageZoom component
 type Props = {
   src: string
 }
 
-// Get the props with type safety
 defineProps<Props>()
 
 const modalRef = ref<HTMLElement | null>(null)
 const isZoomed = ref(false)
 const previouslyFocusedElement = ref<HTMLElement | null>(null)
 
-// Handle scroll events to close the zoomed image
+// Sluit modal bij scrollen
 const scrollHandler = () => {
   closeZoom()
 }
 
-// Focus trap voor de zoom modal
+// Focus trap: houdt focus binnen modal, sluit met Escape
 const handleKeydown = (e: KeyboardEvent) => {
-  if (!isZoomed.value) return // ← Modal dicht? Doe niets.
+  if (!isZoomed.value) return
 
   if (e.key === 'Escape') closeZoom()
   if (e.key === 'Tab') e.preventDefault()
 }
 
-// Function to open the zoomed image
+// Opent zoom modal en slaat vorige focus op voor herstel bij sluiten
 const openZoom = () => {
   previouslyFocusedElement.value = document.activeElement as HTMLElement
   isZoomed.value = true
   window.addEventListener('scroll', scrollHandler)
 
-  // Focus the modal for accessibility
   nextTick(() => {
     modalRef.value?.focus()
   })
 }
 
-// Function to close the zoomed image
+// Sluit modal en herstelt focus naar origineel element
 const closeZoom = () => {
   isZoomed.value = false
   window.removeEventListener('scroll', scrollHandler)
@@ -84,7 +81,7 @@ onMounted(() => {
   document.addEventListener('keydown', handleKeydown)
 })
 
-// Verwijder scroll listen als component unmount
+// Cleanup: verwijder alle event listeners bij unmount
 onUnmounted(() => {
   window.removeEventListener('scroll', scrollHandler)
   document.removeEventListener('keydown', handleKeydown)

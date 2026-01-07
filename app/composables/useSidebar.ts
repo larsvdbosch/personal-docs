@@ -37,7 +37,7 @@ export function useSidebar(name: string) {
     }
   }
 
-  // Functions to toggle, open, and close the sidebar
+  // Sidebar toggle functies
   const toggle = () => {
     isOpen.value = !isOpen.value
   }
@@ -56,14 +56,14 @@ export function useSidebar(name: string) {
     previouslyFocusedElement.value?.focus()
   }
 
-  // Watch for changes in isOpen to manage body overflow
+  // Voorkom scrollen wanneer sidebar open is
   watch(isOpen, (newValue) => {
     if (import.meta.client) {
       document.body.style.overflow = newValue ? 'hidden' : ''
     }
   })
 
-  // Close the sidebar on route change
+  // Sluit sidebar bij route wijziging
   const route = useRoute()
 
   watch(route, () => {

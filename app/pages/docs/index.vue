@@ -18,16 +18,15 @@
         :label="card.label"
         :description="card.description"
         :to="card.to"
+        :variant="card.variant"
       />
     </div>
   </main>
 </template>
 
 <script setup lang="ts">
-// Define the structure of a documentation card
 import type { Card } from '~/components/Card.vue'
 
-// Set SEO meta tags for the documentation index page
 useSeoMeta({
   title: 'Home | Documentation',
   description: 'Documentation page',
@@ -43,36 +42,42 @@ const cards: Card[] = [
     label: 'Getting started',
     description: 'Learn how to use the Linear API',
     to: '/docs/nuxt',
+    variant: 'dark',
   },
   {
     icon: 'lucide:book-open',
     label: 'Components',
     description: 'Explore the UI components available',
     to: '/docs/components',
+    variant: 'dark',
   },
   {
     icon: 'lucide:cog',
     label: 'Configuration',
     description: 'Understand configuration options',
     to: '/docs/configuration',
+    variant: 'dark',
   },
   {
     icon: 'lucide:shield-check',
     label: 'Security',
     description: 'Learn about security best practices',
     to: '/docs/security',
+    variant: 'dark',
   },
   {
     icon: 'lucide:spotlight',
     label: 'Performance',
     description: 'Optimize your application performance',
     to: '/docs/performance',
+    variant: 'dark',
   },
   {
     icon: 'lucide:blocks',
     label: 'Plugins',
     description: 'Extend functionality with plugins',
     to: '/docs/plugins',
+    variant: 'dark',
   },
 ]
 </script>
