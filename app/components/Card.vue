@@ -2,7 +2,7 @@
   <NuxtLink
     aria-labelledby="card-title"
     :to="to"
-    :class="['relative flex w-full min-h-64 border rounded-lg p-4', variantClasses[variant], 'card-hover-effect']"
+    :class="['relative flex w-full min-h-64 border rounded-2xl p-4', variantClasses[variant], 'card-hover-effect']"
   >
     <div class="absolute flex top-0 left-0 ml-4 mt-4">
       <Icon

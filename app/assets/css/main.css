@@ -1,16 +1,13 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-:root {
-    font-family: var(--font-display);
-}
-
 body {
     min-height: 100dvh;
     color: var(--color-black);
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-display);
 }
 
 /* Theme variables */
@@ -44,28 +41,28 @@ body {
   font-size: clamp(2.5rem, 1.978rem + 2.609vw, 4rem);
   line-height: 1;
   font-weight: 600;
-  letter-spacing: var(--tracking-tight);
+  letter-spacing: var(--tracking-tighter);
 }
 
 @utility text-h2 {
   font-size: clamp(2.25rem, 1.978rem + 2.609vw, 3.5rem);
   line-height: 1;
   font-weight: 600;
-  letter-spacing: var(--tracking-tight);
+  letter-spacing: var(--tracking-tighter);
 }
 
 @utility text-h3 {
   font-size: clamp(2rem, 1.722rem + 1.304vw, 3rem);
   line-height: 1;
   font-weight: 600;
-  letter-spacing: var(--tracking-tight);
+  letter-spacing: var(--tracking-tighter);
 }
 
 @utility text-h4 {
   font-size: clamp(1.75rem, 1.467rem + 0.978vw, 2.5rem);
   line-height: 1;
   font-weight: 600;
-  letter-spacing: var(--tracking-tight);
+  letter-spacing: var(--tracking-tighter);
 }
 
 @utility text-h5 {
@@ -132,11 +129,11 @@ body {
 }
 
 .prose h5 {
-  @apply text-h5 mt-8 mb-4 text-white;
+  @apply text-h5 mt-8 mb-4 text-white leading-10;
 }
 
 .prose h6 {
-  @apply text-h6 mt-8 mb-4 text-white;
+  @apply text-h6 mt-8 mb-4 text-white leading-6;
 }
 
 .prose p {

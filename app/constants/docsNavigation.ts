@@ -9,12 +9,24 @@ export const docsNavigationCode: NavItem[] = [
     href: '/docs/nuxt',
   },
   {
-    title: 'Eslint',
+    title: 'ESLint',
     href: '/docs/eslint',
   },
   {
     title: 'Tailwind',
     href: '/docs/tailwind',
+  },
+  {
+    title: 'Github',
+    href: '/docs/github',
+  },
+  {
+    title: 'Netlify',
+    href: '/docs/netlify',
+  },
+  {
+    title: 'AI Workflow',
+    href: '/docs/ai-workflow',
   },
 ]
 

@@ -37,7 +37,10 @@
   <div class="flex justify-center gap-4 w-full mt-8">
     <!-- Navigatie knoppen voor swiper -->
     <button
+      id="previous-button"
+      title="Previous slide"
       class="flex bg-toast rounded-full p-2 cursor-pointer"
+      aria-label="Previous slide"
       @click="swiper.prev()"
     >
       <Icon
@@ -47,7 +50,10 @@
       />
     </button>
     <button
+      id="next-button"
+      title="Next slide"
       class="flex bg-toast rounded-full p-2 cursor-pointer"
+      aria-label="Next slide"
       @click="swiper.next()"
     >
       <Icon

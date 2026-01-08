@@ -50,4 +50,18 @@ export default defineNuxtConfig({
       stylistic: true,
     },
   },
+  fonts: {
+    families: [
+      {
+        name: 'Public Sans',
+        provider: 'google',
+        weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      },
+      {
+        name: 'Geist Mono',
+        provider: 'google',
+        weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      },
+    ],
+  },
 })

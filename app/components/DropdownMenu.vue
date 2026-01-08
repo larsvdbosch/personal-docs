@@ -6,7 +6,6 @@
     <button
       class="flex items-center gap-2 text-label active-label-state text-black w-full hover:bg-zinc-200/50 active:bg-zinc-200 px-3 py-2 rounded-lg transition-colors ease-[cubic-bezier(.25,.46,.45,.94)] duration-150"
       aria-haspopup="true"
-      aria-label="open"
       :aria-expanded="isOpen"
       :aria-controls="dropdownId"
       @click="toggle"
@@ -20,12 +19,12 @@
         ]"
       />
     </button>
-    <div
+    <ul
       :id="dropdownId"
       :class="['absolute min-w-48 mt-2 bg-white rounded-xl p-1 top-full flex flex-col gap-1 origin-top transition-[opacity,scale] duration-100 ease-out', isOpen ? 'scale-100 opacity-100 visible' : 'scale-90 opacity-0 pointer-events-none invisible']"
     >
       <slot />
-    </div>
+    </ul>
   </div>
 </template>
 
