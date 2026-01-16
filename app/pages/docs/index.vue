@@ -3,9 +3,9 @@
     class="text-white max-w-5xl mx-auto px-4 py-8 md:py-12 lg:py-16"
   >
     <div>
-      <h2 class="text-h4 mb-4">
+      <h1 class="text-h4 mb-4">
         Lars' personal documentation
-      </h2>
+      </h1>
       <p class="text-paragraph">
         Welcome to my personal documentation. Here you will find all the information you need.
       </p>

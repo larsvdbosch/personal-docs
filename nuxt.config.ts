@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'motion-v/nuxt',
     'nuxt-swiper',
+    '@nuxt/a11y',
   ],
   devtools: { enabled: true },
   app: {

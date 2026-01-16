@@ -10,6 +10,6 @@
       height="24"
       class="rounded-full"
     />
-    <span class="text-2xl font-semibold leading-5 tracking-tighter">Documentation</span>
+    <span class="text-h6">Documentation</span>
   </NuxtLink>
 </template>

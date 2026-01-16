@@ -12,10 +12,13 @@
     />
 
     <!-- Fullscreen overlay met vergrote afbeelding -->
-    <Teleport to="body">
+    <Teleport
+      to="body"
+    >
       <div
         ref="modalRef"
-        :class="['fixed h-full w-full inset-0 bg-black/95 flex items-center justify-center z-100 transition-opacity duration-150 ease-out cursor-zoom-out', isZoomed ? 'opacity-100' : 'opacity-0 invisible']"
+        :class="['fixed h-full w-full inset-0 bg-black/95 flex items-center justify-center z-100 transition-opacity duration-150 ease-out cursor-zoom-out',
+                 isZoomed ? 'opacity-100 visible' : 'opacity-0 invisible']"
         tabindex="-1"
         role="dialog"
         aria-modal="true"
@@ -27,7 +30,8 @@
           alt="Zoomed"
           width="1280"
           height="720"
-          :class="['max-h-[90vh] max-w-[90vw] transition-scale duration-400 ease-out rounded-lg', isZoomed ? 'scale-100' : 'scale-90']"
+          :class="['max-h-[90vh] max-w-[90vw] transition-scale duration-400 ease-out rounded-lg',
+                   isZoomed ? 'scale-100' : 'scale-90']"
           loading="lazy"
         />
       </div>

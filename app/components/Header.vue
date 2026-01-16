@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed w-full top-0 h-(--header-height) z-50 transition-[background-color] ease-out duration-150">
+  <header class="fixed w-full top-0 h-(--header-height) z-50 transition-[background-color] ease-out duration-300">
     <div class="container flex items-center justify-between w-full h-full">
       <Logo />
       <button
@@ -33,7 +33,7 @@
         </Button>
       </div>
     </div>
-  </nav>
+  </header>
   <MobileSidebar />
 </template>
 
@@ -58,11 +58,11 @@ onUnmounted(() => {
 
 // Toont witte achtergrond met border na 80px scroll voor visuele scheiding
 const changeBackgroundOnScroll = () => {
-  const header = document.querySelector('nav')
+  const header = document.querySelector('header')
   if (window.scrollY > 80) {
-    header?.classList.add('bg-white', 'border-b', 'border-zinc-100')
+    header?.classList.add('bg-white')
   } else {
-    header?.classList.remove('bg-white', 'border-b', 'border-zinc-100')
+    header?.classList.remove('bg-white')
   }
 }
 </script>

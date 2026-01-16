@@ -1,16 +1,8 @@
 <template>
-  <div>
+  <div class="flex min-h-screen flex-col">
     <Header />
     <main>
       <slot />
     </main>
   </div>
 </template>
-
-<script setup lang="ts">
-useHead({
-  bodyAttrs: {
-    class: 'bg-white',
-  },
-})
-</script>

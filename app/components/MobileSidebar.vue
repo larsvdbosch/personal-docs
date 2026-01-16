@@ -3,7 +3,7 @@
   <aside
     id="mobile-sidebar"
     ref="sidebarRef"
-    :class="['fixed top-(--header-height) right-0 h-full bg-white p-4 w-full flex flex-col z-50 transition-translate ease-in-out duration-300', isOpen ? 'translate-x-0': 'translate-x-full invisible']"
+    :class="['fixed top-(--header-height) right-0 h-full bg-white p-4 w-full flex lg:hidden flex-col z-50 transition-translate ease-in-out duration-300', isOpen ? 'translate-x-0': 'translate-x-full invisible']"
     role="dialog"
     aria-modal="true"
     aria-label="Navigatiemenu"

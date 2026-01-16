@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed w-full bg-zinc-950 top-0 h-(--header-height) z-50 border-b border-zinc-900">
+  <header class="fixed w-full bg-zinc-950 top-0 h-(--header-height) z-50 border-b border-zinc-900">
     <div class="px-4 flex items-center justify-between w-full h-full">
       <div class="flex gap-4 items-center justify-center">
         <NuxtLink
@@ -17,7 +17,7 @@
         <div class="h-6 w-px bg-zinc-600" />
         <NuxtLink
           to="/docs"
-          class="hover:text-zinc-500 text-lg font-semibold text-white tracking-tighter transition-background-color ease-out duration-150"
+          class="text-h6 text-white hover:text-zinc-500 transition-background-color ease-out duration-150"
         >
           <span>Documentation</span>
         </NuxtLink>
@@ -37,7 +37,7 @@
         />
       </button>
     </div>
-  </div>
+  </header>
   <MobileSidebar />
 </template>
 
